@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">
+        <img src="robo2.png" alt="robo" class="hello">
+            <nav>
+                <ul>
+                    <a href="https://github.com/fantom787/Geeksters" class="buttonClass" target="_blank">Get extension</a>
+                    
+                </ul>
+                </nav>
+          
+        
+    </header>
+    <div class="container">
+        <div class="slide-container active">
+       <div class="slide">
+        <div class="content">
+            <h3>01. Compose AI</h3>
+            <p>Send professional correspondence from memos to craft effective messages in a fraction of the usual time.</p>
+       <a href="#" class="btn">compose AI</a>
+        </div>
+        <div class="image">
+            <img src="image/img-1.svg" alt="">
+        </div>
+       </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide">
+         <div class="content">
+             <h3>02. Summarise</h3>
+             <p>Condense lengthy emails into concise bullet points, precisely and accurately!
+            </p>
+        <a href="#" class="btn">summarise</a>
+         </div>
+         <div class="image">
+             <img src="image/img-2.svg" alt="">
+         </div>
+        </div>
+     </div>
+
+     <div class="slide-container">
+        <div class="slide">
+         <div class="content">
+             <h3>03. AI Reply</h3>
+             <p> Enhancing automated response functionality by utilizing Artificial Intelligence to determine appropriate responses based on user input and context, including positive, negative, and neutral responses.
+            </p>
+        <a href="#" class="btn">AI-Reply</a>
+         </div>
+         <div class="image">
+             <img src="image/img-3.svg" alt="">
+         </div>
+        </div>
+     </div>
+
+     <div class="slide-container">
+        <div class="slide">
+         <div class="content">
+             <h3>04. Custome Reply</h3>
+             <p>Outline the desired information to be included, Allow Artificial Intelligence to analyze and respond accurately.</p>
+        <a href="#" class="btn">custome-Reply</a>
+         </div>
+         <div class="image">
+             <img src="image/img-4.svg" alt="">
+         </div>
+        </div>
+     </div>
+
+     <div id="prev" onclick="prev()"> < </div>
+     <div id="next" onclick="next()"> > </div>
+
+</div>
+<!--<footer>
+    <p >About Team:</p>
+</footer>  -->
+<script>
+
+let slides = document.querySelectorAll('.slide-container');
+let index = 0;
+
+//next function 
+function next(){
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}
+
+//previous function 
+function prev(){
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
+}
+
+//autoplay
+
+setInterval(next, 7000); //slides changes every 7 seconds
+
+</script>
+
+</body>
+</html>
